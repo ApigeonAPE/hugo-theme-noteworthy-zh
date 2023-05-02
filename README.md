@@ -1,6 +1,7 @@
 # Noteworthy
 
 Noteworthy is a minimalist Hugo theme for writers and bloggers.
+[中文版](README_zh.md)
 
 ![Noteworthy desktop screenshot](https://github.com/kimcc/hugo-theme-noteworthy/blob/master/images/screenshot.png)
 
