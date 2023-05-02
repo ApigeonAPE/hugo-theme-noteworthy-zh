@@ -1,0 +1,140 @@
+# 本部分已经翻译为简体中文并进行适当修改和注释
+baseURL = "https://example.com" # 网站地址
+languageCode = "zh"
+title = "Hugo博客" # 网站标题
+theme = "noteworthy"
+enableRobotsTXT = true # 开关robots.txt
+paginate = 4 # 每页显示的文章数
+summaryLength = 30 # 自动摘要的长度，手动摘要请使用“<!--more-->”
+preserveTaxonomyNames = true # 直译：保留分类名称
+hasCJKLanguage = true # 自动检测文章中是否有汉、韩、日语(可能会影响能不能正确渲染)
+
+# Add your Google Analytics identifier: UA-XXXXXXXX-X / 谷歌分析标识符，格式: UA-XXXXXXXX-X
+googleAnalytics = ""
+
+# Add your Disqus shortname here.
+disqusShortname = "" # Disqus ID
+
+DefaultContentLanguage = "zh"
+[languages] # 博客的语言选项，如果有多语言版本文章可以使用-参见wiki(默认关闭)
+  [languages.zh]
+    LanguageName = "中文"
+    title = "我的博客"
+    weight = 1
+#  [languages.en]
+#    LanguageName = "English"
+#    title = "My Blog"
+#    weight = 2
+#  [languages.it]
+#    LanguageName = "Italiano"
+#    title = "Il mio blog"
+#    weight = 2
+
+[taxonomies]
+  tag = "tags" # 分类方式，默认为标签(tags)，暂时没有发现新的分类方式
+
+[author]
+    name = "作者" # 作者名
+
+# 是否渲染Markdown中的HTML代码
+[markup.goldmark.renderer]
+    unsafe = false
+
+[params]
+    math = true
+    # Blog description at the top of the homepage. Supports markdown.
+    description = "这是你的博客简介，支持 ***Markdown*** " # 修改博客简介
+
+    showReadMore = false # 是否显示“阅读全文”按钮
+
+    # Set enableKofi to true to enable the Ko-fi support button. Add your Ko-fi ID to link to your account.
+    enableKofi = false # 是否启用 Ko-fi
+    kofi = "" # Ko-fi ID
+
+    # 设置你的社交账户，不想要的删除(注释掉也行)
+    # 主要
+    email = "#" # 邮箱地址
+    weibo = "#" # 微博
+    # 以下的国内不常用
+    facebook = "#" # 脸书，需要科学
+    twitter = "#" # 推特，需要科学
+    instagram = "#" # 脸书旗下照片墙，需要科学
+    tumblr = "#"
+    reddit = "#"
+    pinterest = "#"
+    youtube = "#" # 油管，需要科学
+    vimeo = "#"
+    vk = "#"
+    linkedin = "#"
+
+    # 写作
+    medium = "#"
+    blogger = "#"
+    wordpress = "#"
+
+    # 视觉设计
+    dribbble = "#"
+    behance = "#"
+    deviantart = "#"
+    flickr = "#"
+
+    # 音乐
+    soundcloud = "#" # 音云
+
+    # 编程
+    github = "#"
+    stackoverflow = "#"
+    gitlab = "#"
+    codepen = "#"
+
+    # 学术
+    googlescholar = "#" # 谷歌学术
+    impactstory = "#"
+    orcid = "#"
+
+    # 旅行
+    googlemaps = "#" # 谷歌地图
+    tripadvisor = "#"
+
+# 侧边栏中的菜单项
+[[menu.main]]
+    identifier = "关于"
+    name = "About"
+    url = "/about/"
+    weight = 1 # 菜单显示权重，如果不写将会按照字母表排序
+
+[[menu.main]]
+    identifier = "标签"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+
+[[menu.main]]
+    name = "归档"
+    identifier = "Archives"
+    url = "/archives/"
+    weight = 3
+
+# 隐私设置: https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.disqus]
+    disable = false # 是否打开 注意，这里的false还是“否”的意思(不是双重否定)
+  [privacy.googleAnalytics]
+    anonymizeIP = true # 匿名IP
+    disable = false # 
+    respectDoNotTrack = false # 是否尊重访问者发送的“请勿追踪(Do Not Track)”请求
+    useSessionStorage = false # 是否存储会话记录
+  # 以下的国内不常用
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true

@@ -1,0 +1,21 @@
+<footer class="footer-mobile">
+	<div class="footer-mobile-links">
+		<a href="/" target="_self" rel="noreferrer noopener">中文</a>
+<!--	<span class="divider-bar">|</span>
+		<a href="/en/" target="_self" rel="noreferrer noopener">English</a>
+		<span class="divider-bar">|</span>
+		<a href="/en/" target="_self" rel="noreferrer noopener">Italian</a>
+如果需要多语言请参见help.md-->
+	</div>
+	<div class="footer-mobile-links">
+        <a href="https://github.com/apigeonape/hugo-theme-noteworthy-zh" target="_blank" rel="noreferrer noopener">Noteworthy</a>
+		<span class="divider-bar">|</span>
+        <a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">Hugo</a>
+	</div>
+	<div class="footer-mobile-links">
+		<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="/80x15.png" /></a>
+	</div>
+	{{ partial "social.html" . }}
+	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
+	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+</footer>

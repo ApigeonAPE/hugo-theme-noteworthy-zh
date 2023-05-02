@@ -1,0 +1,7 @@
+{{ define "title" }}404 page not found - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    <h1 class="not-found-title">404: Not found</h1>
+    <h2>对不起，你请求的页面没有找到</h2>
+    <a href="{{ "/" | relLangURL }}">回到主页</a>
+{{ end }}

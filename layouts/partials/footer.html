@@ -1,0 +1,17 @@
+<footer class="footer">
+	{{ partial "social.html" . }}
+	<p><a href="/" target="_self" rel="noreferrer noopener">中文</a><!-- <a href="/en/" target="_self" rel="noreferrer noopener">English(β)</a>--></p>
+    <a href="https://github.com/apigeonape/hugo-theme-noteworthy-zh" target="_blank" rel="noreferrer noopener">{{ i18n "noteworthy_theme" }}</a><br />
+    <p><a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">{{ i18n "built_with_hugo" }}</a></p>
+	<p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh"><img style="border-width:0" src="/88x31.png" /><br />{{ i18n "creativecommons" }}</a></p>
+	<div>
+		<a id="busuanzi_container_site_pv">
+			已经有<span id="busuanzi_value_site_pv"></span>次来访
+		</a><br />
+		<a id="busuanzi_container_site_uv">
+			访客共有<span id="busuanzi_value_site_uv"></span>人次
+		</a>
+	</div>
+	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
+	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+</footer>
